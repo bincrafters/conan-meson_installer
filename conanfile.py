@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 from conans import ConanFile, tools
@@ -7,7 +6,7 @@ import os
 
 class MesonInstallerConan(ConanFile):
     name = "meson_installer"
-    version = "0.50.0"
+    version = "0.51.0"
     description = "Meson is a project to create the best possible next-generation build system"
     topics = ("conan", "meson", "mesonbuild", "build-system")
     url = "https://github.com/bincrafters/conan-meson_installer"
@@ -28,7 +27,7 @@ exec "$meson_dir/meson.py" "$@"
 
     def source(self):
         tools.get("{0}/archive/{1}.tar.gz".format(self.homepage, self.version),
-                  sha256="a2f425cb9133c43b35d74ee68ae55a53f1baa727a3fcddf1c664f46245781a05")
+                  sha256="ec1e3942215a858d82c3d2e095d18adcf1ede94a34144662643d88db4dcb5263")
         extracted_dir = "meson-" + self.version
         self.run("dir")
         os.rename(extracted_dir, self._source_subfolder)
