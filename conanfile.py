@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from conans import ConanFile, tools
 import os
 
@@ -15,7 +13,7 @@ class MesonInstallerConan(ConanFile):
     license = "	Apache-2.0"
     no_copy_source = True
     exports = ["LICENSE.md"]
-    requires = "ninja_installer/1.8.2@bincrafters/stable"
+    requires = "ninja/1.9.0"
     _source_subfolder = "source_subfolder"
     _meson_cmd = """@echo off
 CALL python %~dp0/meson.py %*
